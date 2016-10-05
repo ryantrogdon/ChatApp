@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style1.css">
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jscripts.js"></script>
+<!--THIS IS THE NEW SOURCE FILE FOR THE CHATAPP WEB SITE 9/13/2016-->
+<script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<h1>Hello world!</h1>
+<div id="username-area">
+		<p id="enter-text">Enter a username: </p>
+		<p id="name-error"></p>
+
+		<input size="20" id="username"></input>
+		<input type="submit" id="user-submit" value="Click" onclick='add_user();'></input>
+
+	</div>
+<div id="wrapper">
+	<div id="chat"></div>
+
+		<input size="45" id="message"/>
+		<input type="submit" id="send" value="Send" width="50"></input>
+
+</div>
+<div id="users"><span>Users </span></br></div>
+
+<!--
+<script>
+$(document).ready(function () {
+	$("div").click(function () {
+		$("div").fadeOut("slow");
+	});
+});
+</script>
+-->
+</body>
+</html>
