@@ -28,7 +28,7 @@ $(document).ready(function(){
       var msg = '';
 
       for(i=0;i<data.length; i++){
-        alert("success");
+        
         msg = data[i].toString();
         $('#chat').append('<b>' + msg + '</b>' + "<br/>");
         msg = '';
