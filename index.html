@@ -13,18 +13,17 @@
 <div id="username-area">
 		<p id="enter-text">Enter a username: </p>
 		<p id="name-error"></p>
-
-		<input size="20" id="username"></input>
-		<input type="submit" id="user-submit" value="Click"></input>
-
+		<form id="set-username">
+			<input size="20" id="username"></input>
+			<input type="submit" id="user-submit" value="Click" onclick="add_user();"></input>
+		</form>
 	</div>
 <div id="wrapper">
-	<div id="chat">
-	</div>
-
-	<input size="45" id="message"/>
-	<input type="submit" id="send" value="Send" width="50"></input>
-
+	<div id="chat"></div>
+	<form id="messages">
+		<input size="45" id="message"/>
+		<input type="submit" id="send" value="Send" width="50"></input>
+	</form>
 </div>
 <div id="users"><span>Users </span></br></div>
 

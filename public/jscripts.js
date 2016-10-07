@@ -24,6 +24,18 @@ $(document).ready(function(){
 
     });
 
+    socket.on('log-message',function(data){
+      var msg = '';
+
+      for(i=0;i<data.length; i++){
+        alert("success");
+        msg = data[i].toString();
+        $('#chat').append('<b>' + msg + '</b>' + "<br/>");
+        msg = '';
+      }
+
+    });
+
     socket.on('load-users',function(data){
       $('#users').empty();
       $('#users').html("<h2>Users</h2>")
@@ -32,7 +44,12 @@ $(document).ready(function(){
       }
 
     });
+    $('#message').keypress(function(e){
+      if(e.keyCode==13){
+        $('#send').click();
+      }
 
+    });
     $("#send").click(function(){
       socket.emit("new-message",$("#message").val());
       $("#message").val("");
